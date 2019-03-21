@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+    <head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+
+    <h1>Coverting Pseudo Code to Real Code</h1>
+
+    <script type="text/javascript">
+        
+        var computerChoices = ["r", "p", "s"]
+        
+        document.onkeyup = function(event) {
+
+            var userGuess = event.key;
+
+            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+        alert("User guess: " + userGuess);
+        alert("Computer guess: " + computerGuess);
+    //Rules
+
+        //If user picks rock and if computer picks scissors then the user wins.
+
+        if (userGuess === "r" && computerGuess === "s") {
+                alert ("Rock crushes Scissors! You win.")
+            }
+
+        //If user picks roack and computer picks paper then the user loses.
+
+            if (userGuess === "r" && computerGuess === "p") {
+                alert ("Loser.")
+            }
+        
+        //If the user picks scissors and the computer picks rock then the user loses.
+
+            if (userGuess === "s" && computerGuess === "r") {
+                alert ("You Lose.")
+            }
+
+        //If the user picks scissors and the computer picks paper then the user wins.
+            
+        if (userGuess === "s" && computerGuess === "p") {
+                alert ("Scissors cut Paper! You win.")
+            }
+
+        //If the user picks paper and the computer picks scissors then the user loses.
+
+            if (userGuess === "p" && computerGuess === "s") {
+                alert ("You Lose.")
+            }
+
+        //If the user picks paper and the computer picks rock then the user wins.
+
+        if (userGuess === "p" && computerGuess === "r") {
+                alert ("Paper covers Rock! You win.")
+            }
+
+        //If the user picks rock and the computer picks rock they tie.
+        //If the user picks paper and the computer picks paper they tie.
+        //If the user picks scissors and the computer picks scissors they tie.
+
+        if (userGuess === computerGuess) {
+            alert ("Tie!")
+        }
+
+        //User gets one point for winning.
+
+        //Computer gets one point when user loses.
+
+        //Neither get a point if there is a tie.
+
+        };
+
+        
+    </script>
+    
+  </body>
+</html>
